@@ -1,0 +1,67 @@
+.weatherbreakdown {
+    background-color: $white;
+    width: 752px;
+    min-height: 232px;
+
+    color: $blue--dark;
+    padding: 16px;
+    margin: 24px;
+
+    // display: flex;
+    flex-direction: column;
+    
+    @include borderradius;
+
+    &__location {
+        font-size: $fontsize--title;
+    }
+
+    &__stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--center {
+            justify-content: flex-end;
+        }
+
+        &--long {
+            width: 100%;
+            flex-direction: row;
+        }
+
+        &--list {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__feelslike, &__sunrise, &__sunset {
+        font-size: $fontsize--detail;
+        font-weight: bold;
+    }
+
+    &__statbar {
+        height: 40px;
+        width: 350px;
+        font-size: $fontsize--detail;
+        line-height: 40px;
+
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
+
+        border-top: 1.5px dashed $black;
+        border-bottom: 1.5px dashed $black;
+    }
+
+    &__label {
+        font-weight: bold;
+    }
+
+}

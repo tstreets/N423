@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ty's Weather Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="content">
+
+        <nav class="mainnav">
+            <div class="mainnav_links">
+
+            </div>
+            <div class="mainnav__links mainnav__links--center">
+                <a class="mainnav__link" href="#">Home</a>
+                <a class="mainnav__link" href="#">About</a>
+                <a class="mainnav__link" href="#">Contact</a>
+                <a class="mainnav__link" href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+            </div>
+            <div class="mainnav__links">
+                <a href="#" class="mainnav__link">Signup</a>
+                <a href="#" class="mainnav__link">Login</a>
+            </div>
+        </nav>
+
+        <form class="callout">
+            <h2 class="callout__title">For weather info, enter your zipcode.</h2>
+            <div class="callout__form">
+                <input class="callout__zipcode" type="text" maxlength="5">
+                <input type="submit" value="Show Weather!" class="callout__button">
+            </div>
+        </form>
+
+        <div class="message"></div>
+
+        <div class="weatheroverview" hidden>
+            <h4 class="weatheroverview__location">City, State Weather</h4>
+            <p class="weatheroverview__time">00:00 AM</p>
+            <div class="weatheroverview__stats">
+                <div class="weatheroverview__stat">
+                    <p class="weatheroverview__temp">00°</p>
+                    <p class="weatheroverview__label">Sunny</p>
+                </div>
+                <div class="weatheroverview__stat weatheroverview__stat--center">
+                    <img class="weatheroverview__icon" alt="icon" src="">
+                    <p class="weatheroverview__hilow">Hi°/Low°</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="weatherbreakdown" hidden>
+            <h4 class="weatherbreakdown__location">Weather Breakdown in City, State, Country</h4>
+            <div class="weatherbreakdown__stats">
+                <div class="weatherbreakdown__stat weatherbreakdown__stat--long">
+                    <p class="weatherbreakdown__feelslike">00°</p>
+                    <div class="weatherbreakdown__sunsetsunrise">
+                        <p class="weatherbreakdown__sunrise">00:00 AM</p>
+                        <p class="weatherbreakdown__sunset">00:00 PM</p>
+                    </div>
+                </div>
+                <div class="weatherbreakdown__stat weatherbreakdown__stat--list  weatherbreakdown__stat--long">
+                    <div class="weatherbreakdown__statbar">
+                        <span class="weatherbreakdown__label">High / Low</span>
+                        <span class="weatherbreakdown__hilow">00° / 00°</span>
+                    </div>
+                    <div class="weatherbreakdown__statbar">
+                        <span class="weatherbreakdown__label">Humidity</span>
+                        <span class="weatherbreakdown__humidity">00%</span>
+                    </div>
+                    <div class="weatherbreakdown__statbar">
+                        <span class="weatherbreakdown__label">Cloud</span>
+                        <span class="weatherbreakdown__cloud">0</span>
+                    </div>
+                    <div class="weatherbreakdown__statbar">
+                        <span class="weatherbreakdown__label">Latitude / Longitude</span>
+                        <span  class="weatherbreakdown__latlon">0° / 0°</span>
+                    </div>
+                    <div class="weatherbreakdown__statbar">
+                        <span class="weatherbreakdown__label">Gust</span>
+                        <span class="weatherbreakdown__gust">0 mph</span>
+                    </div>
+                    <div class="weatherbreakdown__statbar">
+                        <span class="weatherbreakdown__label">Precipitation</span>
+                        <span class="weatherbreakdown__precip">0 in</span>
+                    </div>
+                    <div class="weatherbreakdown__statbar">
+                        <span class="weatherbreakdown__label">Pressure</span>
+                        <span  class="weatherbreakdown__pressure">0 in</span>
+                    </div>
+                    <div class="weatherbreakdown__statbar">
+                        <span class="weatherbreakdown__label">Visibility</span>
+                        <span class="weatherbreakdown__vis">0 in</span>
+                    </div>
+                    <div class="weatherbreakdown__statbar">
+                        <span class="weatherbreakdown__label">Wind Direction</span>
+                        <span class="weatherbreakdown__winddir">North</span>
+                    </div>
+                    <div class="weatherbreakdown__statbar">
+                        <span class="weatherbreakdown__label">Wind Speed</span>
+                        <span class="weatherbreakdown__windspeed">00 mph</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weatherforecast" hidden>
+            <div class="forecast">
+                <h4 class="forecast__title">Today</h4>
+                <img class="forecast__icon" alt="icon" src="">
+                <p class="forecast__label">Sunny</p>
+                <p class="forecast__hilow">Hi°/Low°</p>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>

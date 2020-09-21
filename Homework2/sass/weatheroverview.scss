@@ -1,0 +1,52 @@
+.weatheroverview {
+    background-color: $blue--dark;
+    width: 500px;
+    height: 232px;
+
+    color: $white;
+    padding: 16px;
+
+    // display: flex;
+    flex-direction: column;
+    
+    @include borderradius;
+
+    &__location {
+        font-size: $fontsize--title;
+        margin-bottom: 0px;
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--center {
+            justify-content: flex-end;
+        }
+    }
+
+    &__temp {
+        font-size: $fontsize--focus;
+    }
+
+    &__label {
+        font-weight: bold;
+        font-size: $fontsize--detail;
+    }
+
+    &__icon {
+        transform: scale(2);
+        margin-bottom: -16px;    
+    }
+
+    &__icon, &__hilow {
+        margin-top: 8px;
+    }
+
+}
