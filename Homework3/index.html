@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Roster</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="content">
+    <!-- 
+        --------------------------------------------------
+        New Student Form
+        Inputs: [
+            name: String, 
+            age: Integer, 
+            phone: Integer, 
+            email: String, 
+            classes: { 
+                name: Sring, 
+                code: String, 
+                teacher: String 
+            }[]
+        ]
+        --------------------------------------------------
+    -->
+
+    <form class="studentform newstudent">
+        <label class="studentform__label studentform__label--title">New Student</label>
+        <input class="studentform__btn studentform__btn--corner hidebtn" type="button" value="Show Form">
+
+        <fieldset class="studentform__fieldset" hidden>
+            <legend class="studentform__legend">Personal Info</legend>
+            <div class="studentform__group">
+                <label class="studentform__label">Full Name</label>
+                <input class="studentform__input" type="text" name="name" placeholder="Full Name">
+            </div>
+            <div class="studentform__group">
+                <label class="studentform__label">Age</label>
+                <input class="studentform__input" type="number" name="age" min="0" value="18">
+            </div>
+            <div class="studentform__group">
+                <label class="studentform__label">Phone Number</label>
+                <input class="studentform__input" type="tel" name="phone" placeholder="#########" maxlength="10">
+            </div>
+            <div class="studentform__group">
+                <label class="studentform__label">Email Address</label>
+                <input class="studentform__input" type="email" name="email" placeholder="email@domain.edu">
+            </div>
+        </fieldset>
+
+        <fieldset class="studentform__fieldset classes" hidden>
+            <legend class="studentform__legend">Classes</legend>
+
+            <fieldset class="studentform__fieldset" hidden>
+                <legend class="studentform__legend studentform__legend--sub">Class 1</legend>
+                <div class="studentform__group">
+                    <label class="studentform__label">Class Name</label>
+                    <input class="studentform__input" type="text" data-name="name" placeholder="Class Name">
+                </div>
+                <div class="studentform__group">
+                    <label class="studentform__label">Class Code</label>
+                    <input class="studentform__input" type="text" data-name="code" placeholder="XXXX-X ###">
+                </div>
+                <div class="studentform__group">
+                    <label class="studentform__label">Teacher</label>
+                    <input class="studentform__input" type="text" data-name="teacher" placeholder="John Doe">
+                </div>
+            </fieldset>
+
+            <div class="studentform__group">
+                <input class="studentform__btn removeclass" type="button" data-form="newstudent" value="Remove Class">
+                <input class="studentform__btn addclass" type="button" data-form="newstudent" value="Add Class">
+            </div>
+        </fieldset>
+
+        <input class="studentform__btn submitbtn" type="submit" value="Add Student" hidden>
+    </form>
+     
+     
+    <!-- 
+        --------------------------------------------------
+        Student Roster
+        --------------------------------------------------
+    -->
+
+    <div class="studentlist">
+
+    </div>
+     
+     
+    <!-- 
+        --------------------------------------------------
+        Student Data Form
+        Inputs: [
+            name: String, 
+            age: Integer, 
+            phone: Integer, 
+            email: String, 
+            classes: { 
+                name: Sring, 
+                code: String, 
+                teacher: String 
+            }[]
+        ]
+        --------------------------------------------------
+    -->
+
+    <form class="studentform studentdata" hidden>
+        <input class="studentform__btn studentform__btn--corner" type="button" data-name="close" value="Close">
+
+        <fieldset class="studentform__fieldset">
+            <input class="studentform__input studentid" type="text" name="id" hidden disabled>
+            <div class="studentform__group">
+                <label class="studentform__label">Full Name</label>
+                <input class="studentform__input" type="text" name="name" placeholder="Full Name" disabled>
+            </div>
+            <div class="studentform__group">
+                <label class="studentform__label">Age</label>
+                <input class="studentform__input" type="number" name="age" min="0" value="18" disabled>
+            </div>
+            <div class="studentform__group">
+                <label class="studentform__label">Phone Number</label>
+                <input class="studentform__input" type="tel" name="phone" placeholder="#########" maxlength="10" disabled>
+            </div>
+            <div class="studentform__group">
+                <label class="studentform__label">Email Address</label>
+                <input class="studentform__input" type="email" name="email" placeholder="email@domain.edu" disabled>
+            </div>
+        </fieldset>
+
+        <fieldset class="studentform__fieldset classes">
+            <legend class="studentform__legend">Classes</legend>
+
+            <div class="studentform__group">
+                <input class="studentform__btn removeclass" type="button" data-form="studentdata" value="Remove Class" data-name="removeclass" hidden>
+                <input class="studentform__btn addclass" type="button" data-form="studentdata" data-name="addclass" value="Add Class" hidden>
+            </div>
+        </fieldset>
+        
+
+        <div class="studentform__group">
+            <input class="studentform__btn" type="button" data-name="edit" value="Edit">
+            <input class="studentform__btn" type="button" data-name="delete" value="Delete" hidden>
+            <input class="studentform__btn" type="submit" data-name="update" value="Update" hidden>
+        </div>
+    </form>
+     
+     
+    <!-- 
+        --------------------------------------------------
+        Loading Modal
+        --------------------------------------------------
+    -->
+    
+    <div class="loading"></div>
+     
+     
+    <!-- 
+        --------------------------------------------------
+        Error Modal
+        --------------------------------------------------
+    -->
+    
+    <div class="errormodal">
+        <h3></h3>
+        <p></p>
+    </div>
+
+    </div>
+
+
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>

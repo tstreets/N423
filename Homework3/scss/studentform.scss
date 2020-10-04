@@ -1,0 +1,80 @@
+.studentform {
+    background-color: $color--4;
+    border: 2px solid $color--1;
+    width: 400px;
+    min-height: 0px;
+    padding: 24px;
+
+    &:not([hidden]) {
+        display: flex;
+    }
+    flex-direction: column;
+    align-items: center;
+
+    &__input {
+        width: 280px;
+        height: 20px;
+        border: 1px solid $color--1;
+        padding: 17px 20px;
+
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 2px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        background-color: $color--5;
+        color: #2699FB;
+        font-weight: bold;
+
+        &::placeholder {
+            color: $color--2;
+        }
+    }
+
+    &__btn {
+        background-color: $color--5;
+        border-color: $color--1;
+        padding: 4px;
+        border-radius: 4px;
+
+        &--corner {
+            align-self: flex-end;
+        }
+    }
+
+    &__label {
+        font-size: $fontsize--tiny;
+        letter-spacing: $letterspacing--tiny;
+        line-height: $lineheight--tiny;
+        color: $color--1;
+        display: block;
+        margin-bottom: 4px;
+
+        &--title {
+            font-size: $fontsize--title;
+            letter-spacing: $letterspacing--title;
+            line-height: $lineheight--title;
+            align-self: flex-start;
+        }
+    }
+
+    &__group {
+        margin-bottom: 16px;
+    }
+
+    &__fieldset {
+        padding: 8px;
+        color: $color--1;
+        border: solid $color--3;
+        margin-bottom: 8px;
+    }
+
+    &__legend {
+        font-size: $fontsize--subtitle;
+
+        &--sub {
+            font-size: $fontsize--normal;
+            line-height: $lineheight--normal;
+        }
+    }
+}

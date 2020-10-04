@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: bold;
     font-size: 18px; }
   .weatheroverview__icon {
-    transform: scale(2);
+    /* transform: scale(2); */
     margin-bottom: -16px; }
   .weatheroverview__icon, .weatheroverview__hilow {
     margin-top: 8px; }
@@ -163,7 +163,8 @@ h1, h2, h3, h4, h5, h6, p {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin-right: 20px; }
+  margin-right: 20px;
+  border-radius: 8px; }
   .forecast__title {
     font-size: 24px; }
   .forecast__label, .forecast__hilow {
