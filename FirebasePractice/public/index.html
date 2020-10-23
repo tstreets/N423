@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Firebase Practice</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <input class="testAdd" type="button" value="Add Data">
+    <input class="testGet" type="button" value="Get Data">
+
+    <form class="myForm">
+      
+    </form>
+
+    <button class="signup">Sign Up</button>
+    <button class="login">Login</button>
+    <button class="logout">Logout</button>
+    <button class="update">Update User</button>
+
+    <!-- update the version number as needed -->
+    <script defer src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.22.1/firebase-messaging.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.22.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="./init-firebase.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
