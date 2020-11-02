@@ -1,0 +1,13 @@
+{
+  "name": "Homework5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve-local": "firebase serve --only hosting",
+    "deploy-without-functions": "firebase deploy --except functions"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
